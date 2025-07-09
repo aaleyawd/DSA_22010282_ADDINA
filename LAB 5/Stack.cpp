@@ -104,6 +104,6 @@ int main() {
     cout << "After pop: ";
     stack.display_stack();
 
-    // No manual memory cleanup needed – handled by destructor
+    // No manual memory cleanup needed â€“ handled by destructor
     return 0;
 }
