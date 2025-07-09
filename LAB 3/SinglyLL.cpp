@@ -110,6 +110,6 @@ int main() {
     cout << "After deleting Ahmed: ";
     linkedlst.display_list();
 
-    // No need to manually delete nodes — handled by destructor
+    // No need to manually delete nodes â€” handled by destructor
     return 0;
 }
