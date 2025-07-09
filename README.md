@@ -2,9 +2,9 @@
 # [TEB1113] Algorithm & Data Structure
 
 Name: Nur 'Aleya Addina Binti Mohd Wahid <br>
-Student ID: 22010282
-Programme: Bachelor in Computer Engineering
-Course: TEB1113 Algorithm & Data Structure
+Student ID: 22010282 <br>
+Programme: Bachelor in Computer Engineering <br>
+Course: TEB1113 Algorithm & Data Structure <br>
 Semester: May 2025
 
 Lab Tasks for Algorithm & Data Structure
