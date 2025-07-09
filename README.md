@@ -1,8 +1,8 @@
 # TEB1113_DSA_22010282_ADDINA
 # [TEB1113] Algorithm & Data Structure
 
-Name: Nur 'Aleya Addina Binti Mohd Wahid
-Student ID: 22010282
+Name: Nur 'Aleya Addina Binti Mohd Wahid/n
+Student ID: 22010282/n
 Programme: Bachelor in Computer Engineering
 Course: TEB1113 Algorithm & Data Structure
 Semester: May 2025
