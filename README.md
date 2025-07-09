@@ -8,7 +8,7 @@ Lab tasks for ADS May 2025.
 | Date      | Lab | Tasks                                                                                                                     |
 | --------- | --- | ------------------------------------------------------------------------------------------------------------------------- |
 | 28/5/2025 | 1   | - [Array](./LAB_1/Array.cpp)                                                                                             |
-| 04/6/2025 | 2   | Algorithm Challenges: <br> - [Easy Level](./LAB_2/Easylevel.cpp) <br> - [Medium Level](./LAB_2/MediumLevel.cpp) <br> - [Hard Level](./LAB_2/HardLevel.cpp)          |
+| 04/6/2025 | 2   | Algorithm Challenges: <br> - [Easy Level](./LAB_2/EasyLevel.cpp) <br> - [Medium Level](./LAB_2/MediumLevel.cpp) <br> - [Hard Level](./LAB_2/HardLevel.cpp)          |
 | 11/6/2025 | 3   | Linked List: <br> - [Singly Linked List](./LAB_3/SinglyLL.cpp) <br> - [Doubly Linked List](./LAB_3/DoublyLL.cpp)                                            |
 | 18/6/2025 | 4   | Circular Linked List: <br> - [Circular Singly Linked List](./LAB_4/CircularSinglyLL.cpp) <br> - [Circular Doubly Linked List](./LAB_4/CircularDoublyLL.cpp) |
 | 25/6/2025 | 5   | - [Stack](./LAB_5/Stack.cpp)                                                                                                 |
