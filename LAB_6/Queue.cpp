@@ -2,7 +2,7 @@
 Name: Nur 'Aleya Addina Binti Mohd Wahid
 Student ID: 22010282
 Lab Group: G1
-Lab: Lab 6 (Queue)
+Lab Task: Lab 6 (Queue)
 */
 
 #include <iostream>
