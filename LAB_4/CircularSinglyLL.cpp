@@ -2,7 +2,7 @@
 Name: Nur 'Aleya Addina Binti Mohd Wahid
 Student ID: 22010282
 Lab Group: G1
-Lab: Lab 4 (Circular Singly Linked List)
+Lab Task: Lab 4 (Circular Singly Linked List)
 */
 
 #include <iostream>
