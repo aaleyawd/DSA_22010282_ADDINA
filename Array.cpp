@@ -44,7 +44,7 @@ int main()
         cout << "\nStudent ID: " << students[i].stud_id;
         cout << "\nName: " << students[i].name;
         cout << "\nEmail: " << students[i].email;
-        cout << "\nPhone Number: " << students[i].phone;
+        cout << "\nContant: " << students[i].phone;
         cout << "\n------------------------------------------------\n";
     }
 
