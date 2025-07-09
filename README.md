@@ -1,7 +1,13 @@
 # TEB1113_DSA_22010282_ADDINA
 # [TEB1113] Algorithm & Data Structure
 
-Lab tasks for ADS May 2025.
+Name: Nur 'Aleya Addina Binti Mohd Wahid
+Student ID: 22010282
+Programme: Bachelor in Computer Engineering
+Course: TEB1113 Algorithm & Data Structure
+Semester: May 2025
+
+Lab Tasks for Algorithm & Data Structure
 
 ## Lab Tasks
 
