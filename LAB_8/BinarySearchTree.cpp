@@ -2,7 +2,7 @@
 Name: Nur 'Aleya Addina Binti Mohd Wahid
 Student ID: 22010282
 Lab Group: G1
-Lab: Lab 8 (Binary Search Tree)  
+Lab Task: Lab 8 (Binary Search Tree)  
 */
 
 #include <iostream>
