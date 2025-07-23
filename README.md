@@ -19,6 +19,6 @@ Lab Tasks for Algorithm & Data Structure
 | 11/6/2025 | 3   | Linked List: <br> - [Singly Linked List](./LAB_3/SinglyLL.cpp) <br> - [Doubly Linked List](./LAB_3/DoublyLL.cpp)                                            |
 | 18/6/2025 | 4   | Circular Linked List: <br> - [Circular Singly Linked List](./LAB_4/CircularSinglyLL.cpp) <br> - [Circular Doubly Linked List](./LAB_4/CircularDoublyLL.cpp) |
 | 25/6/2025 | 5   | - [Stack](./LAB_5/Stack.cpp)                                                                                                 |
-| 02/7/2025 | 6   | - [Queue](./LAB_6/Queue.cpp) <br> - [Circular Queue](./LAB_6/CircularQueue.cpp)                                                 |
-| 09/7/2025 | 7   | - [Tree](./LAB_7/Tree.cpp) |
+| 02/7/2025 | 6   | - [Queue](./LAB_6/Queue.cpp) <br> - [Circular Queue](./LAB_6/CircularQueue.cpp) <br> - [Array Queue](./LAB_6/ArrayQueue.cpp)                                                 |
+| 09/7/2025 | 7   | - [Binary Tree](./LAB_7/BinaryTree.cpp) |
 | 16/7/2025 | 8   | - [Binary Search Tree](./LAB_8/BinarySearchTree.cpp) |
