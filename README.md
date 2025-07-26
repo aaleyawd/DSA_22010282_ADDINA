@@ -22,4 +22,4 @@ Lab Tasks for Algorithm & Data Structure
 | 02/7/2025 | 6   | - [Queue](./LAB_6/Queue.cpp) <br> - [Circular Queue](./LAB_6/CircularQueue.cpp) <br> - [Array Queue](./LAB_6/ArrayQueue.cpp)                                                 |
 | 09/7/2025 | 7   | - [Binary Tree](./LAB_7/BinaryTree.cpp) |
 | 16/7/2025 | 8   | - [Binary Search Tree](./LAB_8/BinarySearchTree.cpp) |
-| 23/7/2025 | Final Project | - [INTERACTIVE SEARCH ALGORITHM ANALYZER](./FINAL_PROJECT/SmartSearchApp.html) |
+| 23/7/2025 | Final Project | - [Interactive Search Algorithm Analyzer: Linear VS Binary](./FINAL_PROJECT/SmartSearchApp.html) |
