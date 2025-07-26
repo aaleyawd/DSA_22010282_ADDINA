@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Search App</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      padding: 20px;
+      background-color: #f0f8ff;
+    }
+    h2 {
+      text-align: center;
+    }
+    input, button {
+      font-size: 16px;
+      padding: 6px;
+      margin: 5px;
+    }
+    .output-box {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin: 15px 0;
+      background: #fff;
+      border-radius: 8px;
+    }
+    .container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .column {
+      flex: 1;
+      min-width: 300px;
+    }
+    .highlight {
+      display: inline-block;
+      background: #ffeaa7;
+      margin: 0 4px;
+      padding: 4px 6px;
+      border-radius: 4px;
+    }
+    .details {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    .steps-log {
+      white-space: pre-wrap;
+      background: #f1f2f6;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      font-size: 13px;
+    }
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .comparison-table th, .comparison-table td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: left;
+    }
+    .comparison-table th {
+      background-color: #dfe6e9;
+    }
+    .comparison-table caption {
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-size: 18px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <h2>🧠 Smart Search App</h2>
+
+  <label>Enter Student Scores (comma-separated):</label><br>
+  <input type="text" id="inputArray" placeholder="e.g. 56, 70, 82, 90" /><br><br>
+
+  <label>Search Score:</label><br>
+  <input type="number" id="target" /><br><br>
+
+  <button onclick="runSearch()">🔍 Run Search</button>
+
+  <div class="container">
+    <div class="column output-box">
+      <h3>🔎 Linear Search</h3>
+      <div id="linearOutput"></div>
+    </div>
+    <div class="column output-box">
+      <h3>📈 Binary Search</h3>
+      <div id="binaryOutput"></div>
+    </div>
+  </div>
+
+  <table class="comparison-table">
+    <caption>📊 Linear vs Binary Search Comparison</caption>
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>Linear Search</th>
+        <th>Binary Search</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Working Principle</td>
+        <td>Checks each element one by one until the target is found or the list ends</td>
+        <td>Repeatedly divides the sorted list in half and checks the middle value</td>
+      </tr>
+      <tr>
+        <td>Time Complexity</td>
+        <td>O(n)</td>
+        <td>O(log n)</td>
+      </tr>
+      <tr>
+        <td>Space Complexity</td>
+        <td>O(1)</td>
+        <td>O(log n) (recursive) or O(1) (iterative)</td>
+      </tr>
+      <tr>
+        <td>Number of Steps</td>
+        <td>Up to n steps in the worst case</td>
+        <td>Up to log₂(n) steps in the worst case</td>
+      </tr>
+      <tr>
+        <td>Best Use Cases</td>
+        <td>Unsorted or small datasets</td>
+        <td>Large sorted datasets</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    function linearSearch(arr, target) {
+      let steps = 0;
+      let output = '';
+      let found = false;
+      let stepsLog = '';
+
+      for (let i = 0; i < arr.length; i++) {
+        steps++;
+        output += `<span class="highlight">${arr[i]}</span>`;
+        stepsLog += `Step ${steps}: Compare ${arr[i]} with ${target}\n`;
+        if (arr[i] === target) {
+          stepsLog += `✅ Found ${target} at index ${i}\n`;
+          found = true;
+          break;
+        }
+      }
+
+      if (!found) stepsLog += `❌ ${target} not found in the scores`;
+
+      document.getElementById("linearOutput").innerHTML = `
+        ${output}<br><br>
+        <div class="details">
+          📊 Steps: ${steps}<br>
+          ⏱ Time: ~${(steps * 0.001).toFixed(3)} ms<br>
+          💾 Space Complexity: O(1)<br>
+          ⏰ Time Complexity: O(n)<br>
+          🔎 Result: <strong>${found ? "Found ✅" : "Not Found ❌"}</strong>
+        </div>
+        <div class="steps-log"><strong>📋 Operation Steps:</strong>\n${stepsLog}</div>
+      `;
+    }
+
+    function binarySearch(arr, target) {
+      let sorted = [...arr].sort((a, b) => a - b);
+      let low = 0, high = sorted.length - 1, steps = 0;
+      let output = '';
+      let found = false;
+      let stepsLog = '';
+
+      while (low <= high) {
+        let mid = Math.floor((low + high) / 2);
+        steps++;
+        output = sorted.map((val, i) => 
+          `<span class="highlight" style="${i === mid ? 'background:#55efc4' : ''}">${val}</span>`
+        ).join('');
+
+        stepsLog += `Step ${steps}: Compare ${target} with middle value ${sorted[mid]}\n`;
+
+        if (sorted[mid] === target) {
+          stepsLog += `✅ Found ${target} at index ${mid} (in sorted array)\n`;
+          found = true;
+          break;
+        } else if (sorted[mid] < target) {
+          stepsLog += `${target} > ${sorted[mid]} → Search Right\n`;
+          low = mid + 1;
+        } else {
+          stepsLog += `${target} < ${sorted[mid]} → Search Left\n`;
+          high = mid - 1;
+        }
+      }
+
+      if (!found) stepsLog += `❌ ${target} not found in the scores`;
+
+      document.getElementById("binaryOutput").innerHTML = `
+        ${output}<br><br>
+        <div class="details">
+          📊 Steps: ${steps}<br>
+          ⏱ Time: ~${(steps * 0.001).toFixed(3)} ms<br>
+          💾 Space Complexity: O(log n)<br>
+          ⏰ Time Complexity: O(log n)<br>
+          🔎 Result: <strong>${found ? "Found ✅" : "Not Found ❌"}</strong>
+        </div>
+        <div class="steps-log"><strong>📋 Operation Steps:</strong>\n${stepsLog}</div>
+      `;
+    }
+
+    function runSearch() {
+      const arrayInput = document.getElementById("inputArray").value.trim();
+      const targetInput = document.getElementById("target").value.trim();
+
+      if (!arrayInput || !targetInput) {
+        alert("Please fill in both the scores and the target score.");
+        return;
+      }
+
+      const arr = arrayInput.split(',').map(x => parseInt(x.trim())).filter(x => !isNaN(x));
+      const target = parseInt(targetInput);
+
+      if (arr.length === 0 || isNaN(target)) {
+        alert("Invalid input. Please enter valid numbers.");
+        return;
+      }
+
+      linearSearch(arr, target);
+      binarySearch(arr, target);
+    }
+  </script>
+</body>
+</html>
